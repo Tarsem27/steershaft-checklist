@@ -328,8 +328,8 @@ const res = await fetch(APPS_SCRIPT_URL, {
 }
 
 const styles = {
-  page: { minHeight: "100vh", background: "#0b1220", padding: 16, display: "flex", justifyContent: "center", alignItems: "flex-start", fontFamily: "system-ui" },
-  card: { width: "min(980px, 100%)", background: "#111827", color: "#e5e7eb", borderRadius: 16, padding: 18, boxShadow: "0 12px 28px rgba(0,0,0,0.35)" },
+  page: { minHeight: "100vh", background: "#0b1220", padding: 16, display: "flex", justifyContent: "stretch", alignItems: "stretch", fontFamily: "system-ui" },
+  card: { width: "100%", maxwidth:"none",minHeight: "calc(100vh - 32px)", background: "#111827", color: "#e5e7eb", borderRadius: 16, padding: 18, boxShadow: "0 12px 28px rgba(0,0,0,0.35)" },
   h1: { margin: 0, fontSize: 26 },
   h2: { marginTop: 14, marginBottom: 10, fontSize: 22 },
   row: { marginTop: 14 },
