@@ -3,13 +3,37 @@ const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwTJkvB_UKRhc9T
 
 // Your checklist steps (we’ll replace with the real ones later)
 const STEPS = [
-  { id: "BOM", name: "Correct parts supplied (BOM)" },
-  { id: "T1", name: "Tube cut length T1 within spec" },
-  { id: "T2", name: "Tube cut length T2 within spec" },
-  { id: "PHASE", name: "Phase angle within spec" },
-  { id: "WELD_VIS", name: "Weld visual OK" },
-  { id: "TORQUE", name: "Torque test OK" },
+  { id: "CORRECT_PARTS", name: "Correct Parts Supplied. (As per BOM)" },
+
+  { id: "TUBE_T1", name: "Tube Cut to Correct Length (SC) — T1: 255.5 (14-30-12) ± 1.5mm" },
+  { id: "TUBE_T2", name: "Tube Cut to Correct Length (SC) — T2: ____ ± 1.5mm" },
+  { id: "TUBE_T3", name: "Tube Cut to Correct Length (SC) — T3: ____ ± 1.5mm" },
+
+  { id: "PHASE_ANGLE", name: "Phase Angle (Arrows Aligned) (SC) — 282° ± 2°" },
+
+  { id: "WELD_HEIGHT", name: "Weld Height (CC) — Min 0.79mm / Max 3.18mm (As per gauge)" },
+  { id: "WELD_WIDTH", name: "Weld Width (CC) — Min 5.56mm (As per gauge)" },
+  { id: "WELD_BEAD_CENTRE", name: "Axial location of weld bead centre (CC) — ± 0.8mm (As per gauge)" },
+  { id: "WELD_VISUAL", name: "Weld Free from Pin Holes and Undercutting (CC) — Visual Inspection" },
+
+  { id: "TORQUE_TEST", name: "Torque Test (CC) — 4000 in/lbs (Stamp “T” once completed)" },
+
+  { id: "UJ_FLEX_EFFORT", name: "U-Joint Flex Effort (SC) — Flex Under own Weight" },
+  { id: "UJ_EXCESS_LOOSE", name: "Check U-joint for excessive looseness. (SC) — No missing needles/ Bushes" },
+  { id: "UJ_GREASE_PURGED", name: "U-Joint Purged with Grease. — Grease Visible all 4 Caps" },
+
+  { id: "CIRCLIPS_OK", name: "All circlips are present and inserted correctly (CC) — Visual Inspection" },
+  { id: "SPLINE_GREASED_OK", name: "Spline Greased and is Free of Damage. — Visual Inspection" },
+
+  { id: "YOKES_CORRECT", name: "Correct Yokes Fitted as per Drawing. (Mark each End Yoke Part# with white/yellow paint marker) — Yoke ‘E’ 10.4.731 / Yoke ‘G’ 10.4.731" },
+
+  { id: "A_COLLAPSED_LENGTH", name: "‘A’ Collapsed Length as per Drawing — NOM MAX 584.2 ± 1.5mm" },
+  { id: "EXTENDED_LENGTH", name: "Extended Length as per Drawing — NOM MIN 863.6 ± 1.5mm" },
+
+  { id: "PAINTED", name: "Painted. — Visual Inspection" },
+  { id: "LABELLED", name: "Labelled as per Production Order (SC) — Visual Inspection" },
 ];
+
 
 function normalizeWO(raw) {
   return String(raw || "").trim();
